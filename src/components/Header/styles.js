@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   @media all and (max-width:412px){
     display:none;
   }
+  @media all and (min-width:413px){
+    display:none;
+  }
 `;
 
 export const LogoWrapper = styled.div`
