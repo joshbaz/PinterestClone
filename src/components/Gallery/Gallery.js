@@ -1,14 +1,21 @@
 import React from "react";
 import Pin from "../Pin";
-import { Wrappers, Containers } from "./galleryStyles";
-
-const GalleryS = () => {
+import { Wrappers, Containers, Wrap } from "./galleryStyles";
+import './gallery.css'
+const GalleryS = ({ Imgdata, pins }) => {
   return (
-    <Wrappers>
-      <Containers>
-        <Pin/>
+    <Wrap>
+    <p>joshua kimbareeba</p>
+     <Wrappers>
+   
+      <Containers className='galleryboard'>
+        {pins.map((data, index) => {
+          return <Pin key={index} img={data.link} />;
+        })}
       </Containers>
     </Wrappers>
+    </Wrap>
+   
   );
 };
 

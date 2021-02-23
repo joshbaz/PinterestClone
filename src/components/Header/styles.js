@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   padding: 12px 4px 4px 16px;
   background: white;
   color: black;
+
+  @media all and (max-width:412px){
+    display:none;
+  }
 `;
 
 export const LogoWrapper = styled.div`

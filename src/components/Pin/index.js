@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Wrapper, Container } from "./pinStyles";
-const Pin = () => {
-    return (
-        <Wrapper>
-           <Container></Container> 
-        </Wrapper>
-    )
-}
+const Pin = ({ img }) => {
+  return (
+    <Wrapper>
+      <Container>
+        <img src={img} alt="" />
+      </Container>
+    </Wrapper>
+  );
+};
 
-export default Pin
+export default Pin;

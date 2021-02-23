@@ -17,7 +17,19 @@ import {
   HomeText,
   FollowText,
 } from "./styles";
-const Header = () => {
+import { useState } from "react";
+const Header = ({ onSearch }) => {
+  const [Tinput, setTinput] = useState("");
+
+  const changeInput = (e) => {
+    setTinput(e.target.value);
+
+  };
+
+  const onsubmitButton = (e) => {
+    e.preventDefault();
+    onSearch(Tinput);
+  };
   return (
     <Wrapper>
       <LogoWrapper>
@@ -38,8 +50,8 @@ const Header = () => {
           </IconButton>
 
           <form>
-            <input type="text" />
-            <button type="submit"></button>
+            <input type="text" onChange={changeInput} />
+            <button type="submit" onClick={onsubmitButton}></button>
           </form>
         </SearchBarWrapper>
       </SearchWrapper>
